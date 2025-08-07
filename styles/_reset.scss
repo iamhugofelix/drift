@@ -1,0 +1,64 @@
+/* Box sizing and spacing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* Set base font and line height */
+html {
+  font-size: 100%; // easier to scale
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+/* Remove default form styles */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Image defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reset body */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #000;
+}

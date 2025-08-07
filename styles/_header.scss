@@ -1,0 +1,80 @@
+@use './mixins' as *;
+@use './variables' as * ;
+
+.nav-bar {
+  @include flex(space-between, center, row);
+  padding: 1rem;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .logo img {
+   width: 128px;
+  }
+
+  .links {
+   @include flex(start, start, row);
+   flex: 1;
+   transition: all 0.2s ease-in-out;
+
+   .dropdown {
+      position: relative;
+
+      .dropdown-items {
+         display: none;
+         flex-direction: column;
+         gap: 0.5rem;
+         position: absolute;
+         top: 100%;
+         left: 0;
+         background-color: $white;
+         padding: 0.5rem;
+         border: solid 1px $gray-100;
+         border-radius: 8px;
+         min-width: 10rem;
+         box-shadow: $shadow-md;
+
+         .btn {
+            justify-content: start;
+         }
+      }
+
+      &:hover .dropdown-items {
+         display: flex;
+      }
+   }
+      
+  }
+
+  .actions {
+      @include flex(end, center, row);
+      gap: 1rem;
+
+  }
+
+   .mobile {
+         display: none;
+   }
+
+  /* Mobile */
+  @media (max-width: 880px) {
+   .links {
+      display: none;
+   }
+
+   .mobile {
+      display: flex;
+   }
+
+  }
+
+  @media (max-width: 420px) {
+   .btn-secondary {
+      display: none;
+   }
+   .logo img {
+      width: 100px;
+   }
+  }
+}
