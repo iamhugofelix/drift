@@ -828,6 +828,7 @@ a:hover {
 
 /* Extra Bar */
 .extra-bar {
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
