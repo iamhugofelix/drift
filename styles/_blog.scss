@@ -27,11 +27,12 @@
 
     @media screen and (max-width: 880px) {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     @media screen and (max-width: 600px) {
-        @include flex(start, center, column)
+        @include flex(start, center, column);
+        gap: 3rem;
     }
 }
 
@@ -39,15 +40,17 @@
     @include flex (start, center, column);
     gap: 0.75rem;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
 
     .metadata {
         @include flex (start, center, row);
         width: 100%;
-        font-size: $small;
         gap: 0.5rem;
 
         span {
             color: $gray-500;
+            font-size: $xsmall;
+            font-weight: $regular
         }
 
         .categories {
@@ -92,5 +95,9 @@
             font-weight: $regular;
             font-size: $small;
         }
+    }
+
+    &:hover {
+        transform: translateY(-0.25rem);
     }
 }
