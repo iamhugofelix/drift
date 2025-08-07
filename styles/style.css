@@ -883,4 +883,9 @@ a:hover {
 }
 .extra-bar .btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 800px) {
+  .extra-bar .bottom-bar {
+    display: none !important;
+  }
 }/*# sourceMappingURL=style.css.map */

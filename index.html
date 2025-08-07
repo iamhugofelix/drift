@@ -261,13 +261,16 @@
     </div>
 
 <script>
+    function isMobile() {
+        return window.innerWidth <= 800;
+    }
+
     window.addEventListener('scroll', ()=> {
         const extraBar = document.getElementById('extra');
-
         const scrollPosition = window.scrollY + window.innerHeight;
         const pageHeight = document.body.scrollHeight;
 
-        scrollPosition >= pageHeight / 2 ? extraBar.style.display = 'flex' : extraBar.style.display = 'none';
+        scrollPosition >= pageHeight / 2 && !isMobile() ? extraBar.style.display = 'flex' : extraBar.style.display = 'none';
     })
 </script>
 </body>

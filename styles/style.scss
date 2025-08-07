@@ -129,4 +129,10 @@ a {
             background-color: rgba($color: #fff, $alpha: .1);
         }
     }
+
+    @media (max-width: 800px) {
+        .bottom-bar {
+            display: none !important;
+        }
+    }
 }
