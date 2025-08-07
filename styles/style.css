@@ -666,13 +666,32 @@ body {
   font-weight: 500;
   color: #d1d5db;
 }
+@media screen and (max-width: 600px) {
+  .cta-wrapper .cta {
+    padding: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cta-wrapper .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cta-wrapper .actions .input, .cta-wrapper .actions .btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cta-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
 
 .input {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row;
-  min-width: 18rem;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   font-weight: 500;
